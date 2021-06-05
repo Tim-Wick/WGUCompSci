@@ -1,2 +1,2 @@
 # WGUCompSci
-Programming projects for WGU Comp Sci program
+Repository for code files related to programming courses for the WGU Computer Science program.
