@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="753.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Reports">
+   <children>
+      <Label layoutX="266.0" layoutY="20.0" text="Reports">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="MonthPicker" layoutX="36.0" layoutY="85.0" onAction="#MonthSelected" prefWidth="150.0" promptText="Select Month" />
+      <ComboBox fx:id="TypePicker" layoutX="225.0" layoutY="85.0" onAction="#TypeSelected" prefWidth="150.0" promptText="Select Type" />
+      <Label layoutX="186.0" layoutY="56.0" text="Customer Appointments by Type/Month">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="CombinedLabel" alignment="CENTER" layoutX="413.0" layoutY="89.0" prefHeight="17.0" prefWidth="149.0" text="Total for Month and Type" />
+      <TextField fx:id="MonthResult" layoutX="37.0" layoutY="139.0" />
+      <TextField fx:id="TypeResult" layoutX="226.0" layoutY="139.0" />
+      <TextField fx:id="CombinedResult" layoutX="413.0" layoutY="114.0" />
+      <TableView fx:id="ContactTable" layoutX="32.0" layoutY="227.0" prefHeight="200.0" prefWidth="538.0">
+        <columns>
+          <TableColumn fx:id="ContactApptId" prefWidth="56.0" text="Appt ID" />
+          <TableColumn fx:id="ContactTitle" prefWidth="86.0" text="Title" />
+            <TableColumn fx:id="ContactType" prefWidth="83.0" text="Type" />
+            <TableColumn fx:id="ContactStart" prefWidth="64.0" text="Start" />
+            <TableColumn fx:id="ContactEnd" prefWidth="77.0" text="End" />
+            <TableColumn fx:id="ContactCustId" prefWidth="59.0" text="Cust ID" />
+            <TableColumn fx:id="ContactDescription" prefWidth="112.0" text="Description" />
+        </columns>
+      </TableView>
+      <Label layoutX="233.0" layoutY="200.0" text="Schedule for Contacts">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="230.0" layoutY="465.0" text="Schedule for Customer">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="CustomerTable" layoutX="31.0" layoutY="493.0" prefHeight="200.0" prefWidth="538.0">
+         <columns>
+            <TableColumn fx:id="CustomerApptId" prefWidth="56.0" text="Appt ID" />
+            <TableColumn fx:id="CustomerTitle" prefWidth="86.0" text="Title" />
+            <TableColumn fx:id="CustomerType" prefWidth="83.0" text="Type" />
+            <TableColumn fx:id="CustomerStart" prefWidth="64.0" text="Start" />
+            <TableColumn fx:id="CustomerEnd" prefWidth="77.0" text="End" />
+            <TableColumn fx:id="CustomerCustId" prefWidth="59.0" text="Cust ID" />
+            <TableColumn fx:id="CustomerDescription" prefWidth="112.0" text="Description" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="ContactPicker" layoutX="420.0" layoutY="198.0" onAction="#ContactSelected" prefWidth="150.0" promptText="SelectContact" />
+      <ComboBox fx:id="CustomerPicker" layoutX="420.0" layoutY="463.0" onAction="#CustomerSelected" prefWidth="150.0" promptText="SelectCustomer" />
+      <Label fx:id="MonthLabel" alignment="CENTER" layoutX="39.0" layoutY="118.0" prefHeight="17.0" prefWidth="149.0" text="Total for Month" />
+      <Label fx:id="TypeLabel" alignment="CENTER" layoutX="226.0" layoutY="118.0" prefHeight="17.0" prefWidth="149.0" text="Total for Type" />
+      <Button fx:id="ReportsBack" layoutX="536.0" layoutY="714.0" mnemonicParsing="false" onMouseClicked="#ReportsGoBack" text="Back" />
+   </children>
+</AnchorPane>
